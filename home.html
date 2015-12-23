@@ -1,0 +1,30 @@
+<html>
+<title>User Interface</title>
+<script>
+	function submit_form() {
+		var pass=document.getElementById('password').value;
+		var pass_confirm=document.getElementById('confirm_password').value;
+		if (pass=pass_confirm){
+			document.register_form.submit();
+		}
+		else {
+				alert("Passwords do not match");
+				}
+	}
+</script>
+<center>
+<head><h1>User Registration</h1><head>
+<body>
+<form name="register_form" method="POST" action="register_user.php">
+<center>
+
+<br><br><h3>First Name<input type="text" name="first_name" value="" size="18" placeholder="first_name">
+<br><br>Last Name      <input type="text" name="last_name" value="" size="18" placeholder="last_name">
+<br><br>User Name        <input type="text" name="user_name" value="" size="18" placeholder="user_name" >
+<br><br>Password        <input id="password" type="password" name="password" value="" size="18" placeholder="password">
+<br><br>Confirm Password <input id="confirm_password" type="password" name="confirm_passward" value="" size="18" placeholder="confirm_passward">
+<br><br><input value="Login" type="button"  onclick=submit_form()> &nbsp;&nbsp;&nbsp;<input value="Reset" type="submit"></h3>
+</form>
+
+</body>
+</html>
